@@ -50,7 +50,7 @@ class EmployeesController extends Controller
     {
         $employe = Employe::findorfail($id);
 
-        return response()->json(['employe' => $employe]);
+        return response()->json(['employee' => $employe]);
     }
 
     /**

@@ -21,13 +21,14 @@ use Illuminate\Support\Facades\Route;
 Route::controller(EmployeesController::class)->group(function () {
     Route::get('/employe', 'index');
     Route::get('/employe/{id}', 'show');
-
+    
     Route::middleware('auth:sanctum')->group(function () {
-        Route::post('/employe', 'store');
-        Route::put('/employe/{id}', 'update');
-        Route::delete('/employe/{id}', 'destroy');
-        Route::post('/logout', [AuthController::class, 'logout']);
+    	Route::post('/employe', 'store');
+    	Route::put('/employe/{id}', 'update');
+    	Route::delete('/employe/{id}', 'destroy');
+    	Route::post('/logout', [AuthController::class, 'logout']);
     });
+    
 });
 
 //authentication
